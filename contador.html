@@ -12,7 +12,7 @@
     
   }
   main{
-    background-image: url(imagens/barcos-fundo.jpg);
+    background-image: linear-gradient(270deg,#7C2538,#9F4054 30%, #7C2538);
     background-size: cover;
     background-position: center center;
     backface-visibility: hidden;
@@ -23,7 +23,7 @@
     font-size: 13em;
     margin: auto;
     position: relative;
-    color: #5F000D;
+    color: #2B3B4F;
     border-radius: 15PX;
   }
   .button{
@@ -60,12 +60,12 @@
 </style>
 <body>
     <main>
-        <input id="soma" class="button" type="button" value="+" onclick="adicionar()">
+        <input id="soma" class="button" type="button" value="+" onclick="adicionar()" touchsend="parar()">
         <div id="cont">
             0
         </div>
         
-        <input id="subtrai" class="button" type="button" value="-" onclick="tirar()">
+        <input id="subtrai" class="button" type="button" value="-" onclick="tirar()" touchsend="parar()">
     </main>
         <script>
             var num = 0;
