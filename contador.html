@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<style>
+  body{
+    background-color: #F4D4D5;
+    
+  }
+  main{
+    background-image: url(imagens/barcos-fundo.jpg);
+    background-size: cover;
+    background-position: center center;
+    backface-visibility: hidden;
+    max-width: 600px;
+    min-width: 300px;
+    min-height: 500px;
+    height: 900px ;
+    font-size: 13em;
+    margin: auto;
+    position: relative;
+    color: #5F000D;
+    border-radius: 15PX;
+  }
+  .button{
+    width: 200px;
+    height: 100px;
+    border-radius: 48px;
+    background: #F4D4D5;
+    box-shadow: inset -1px 1px 5px 0px rgba(0, 0, 0, 0.46);
+    position: relative;
+    left: 30%;
+    color: #2B3B4F;
+    font-size: 45px;
+  }
+  .button:hover{
+    box-shadow: inset -1px 1px 5px 0px rgba(0, 0, 0, 0.46);
+    background: #7C2538;
+    color: #F4D4D5;
+    transition-duration: 0.5s;
+  }
+  
+#soma{
+    position: absolute;
+    top: 260px;
+}
+#subtrai{
+    position: absolute;
+    top: 590px;
+}
+#cont{
+    position: absolute;
+    top: 356px;
+    left: 39%;
+}
+</style>
+<body>
+    <main>
+        <input id="soma" class="button" type="button" value="+" onclick="adicionar()">
+        <div id="cont">
+            0
+        </div>
+        
+        <input id="subtrai" class="button" type="button" value="-" onclick="tirar()">
+    </main>
+        <script>
+            var num = 0;
+            var cont = window.document.getElementById('cont')
+            var sum = window.document.getElementById('soma')
+            var menos = window.document.getElementById('subtrai')
+            function adicionar(){
+                
+                num += 1
+                cont.innerText = num
+                
+            }
+            
+            function tirar(){
+                num -= 1
+                cont.innerText = num
+                
+            }
+            if(num >= 10){
+                
+            
+                    var leftAtual = parseInt(cont.style.left, 10);
+                    cont.style.left = (leftAtual + 70) + 'px';
+            }
+           
+            
+           
+        </script>
+</body>
+</html>
